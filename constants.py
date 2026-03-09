@@ -96,17 +96,18 @@ WORKING_DIR = SELF_PATH.parent
 VENV_PATH = Path(WORKING_DIR, "env")
 SITE_PACKAGES_PATH = Path(VENV_PATH, SYS_SITE_PACKAGES)
 SCRIPTS_PATH = Path(VENV_PATH, SYS_SCRIPTS)
+FILES_PATH = Path("~/.config/twitch-drops-miner/")
 # Translations path
 # NOTE: These don't have to be available to the end-user, so the path points to the internal dir
 LANG_PATH = _resource_path("lang")
 # Other Paths
-LOG_PATH = Path(WORKING_DIR, "log.txt")
-DUMP_PATH = Path(WORKING_DIR, "dump.dat")
-LOCK_PATH = Path(WORKING_DIR, "lock.file")
-CACHE_PATH = Path(WORKING_DIR, "cache")
+LOG_PATH = Path(FILES_PATH, "log.txt")
+DUMP_PATH = Path(FILES_PATH, "dump.dat")
+LOCK_PATH = Path(FILES_PATH, "lock.file")
+CACHE_PATH = Path(FILES_PATH, "cache")
 CACHE_DB = Path(CACHE_PATH, "mapping.json")
-COOKIES_PATH = Path(WORKING_DIR, "cookies.jar")
-SETTINGS_PATH = Path(WORKING_DIR, "settings.json")
+COOKIES_PATH = Path(FILES_PATH, "cookies.jar")
+SETTINGS_PATH = Path(FILES_PATH, "settings.json")
 # Typing
 JsonType = Dict[str, Any]
 URLType = NewType("URLType", str)
