@@ -96,7 +96,7 @@ WORKING_DIR = SELF_PATH.parent
 VENV_PATH = Path(WORKING_DIR, "env")
 SITE_PACKAGES_PATH = Path(VENV_PATH, SYS_SITE_PACKAGES)
 SCRIPTS_PATH = Path(VENV_PATH, SYS_SCRIPTS)
-FILES_PATH = Path(os.getenv("HOME"))
+FILES_PATH = Path.home() / ".config" / "twitch-drops-miner"
 # Translations path
 # NOTE: These don't have to be available to the end-user, so the path points to the internal dir
 LANG_PATH = _resource_path("lang")
